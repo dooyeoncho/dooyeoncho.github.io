@@ -1,0 +1,11 @@
+name: Dooyeon Cho
+markdown: kramdown
+title: Dooyeon Cho 
+description: Dooyeon Cho - personal webpage
+url: http://dooyeoncho.github.io
+plugins: 
+  - jekyll-sitemap
+  - jekyll-seo-tag
+google_analytics: UA-158182399-1
+
+theme: jekyll-theme-minimal
