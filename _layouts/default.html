@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 	<html>
+		
 		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			{% if site.google_analytics and jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
-			{% seo %}
-		</head>
-		<body>
-		<footer>
     		<ul>
 			<li><a href="https://dooyeoncho.github.io/">Home</a></li>
 			<li><a href="/pages/education.html"> Education</a></li>
@@ -19,7 +10,18 @@
         		<li><a href="mailto:dooyeoncho@skku.edu">Email</a></li>
         		<li><a href="https://github.com/dooyeoncho" target="_blank">github.com/dooyeoncho</a></li>
 		</ul>
+		</head>
+		
+		<footer>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			{% if site.google_analytics and jekyll.environment == 'production' %}
+{% include analytics.html %}
+{% endif %}
+			{% seo %}
 		</footer>
+		<body>
 			
 			{{ content }}
 	
