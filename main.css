@@ -41,8 +41,3 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
-img[src*="#thumbnail"] {
-   width:150px;
-   height:100px;
-}
