@@ -1,0 +1,29 @@
+---
+layout: default
+title: Dooyeon Cho - Students
+---
+		<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+&nbsp;&nbsp;
+<div>		
+<h1 class="headerstyle">STUDENTS</h1>
+</div>
+<div>
+			<div> 
+			<ul>
+				<li> Macroeconomics </li>
+				<li> Money & Banking </li>
+				<li> Financial Economics </li>
+				<li> International Finance </li>
+				<li> Foreign Exchange Market </li>
+				<li> International Economics I (Graduate) </li>
+				<li> Econometrics (Graduate) </li>
+				<li> Big Data Analytics in Macroeconomics (Graduate) </li>
+					<ul>
+					   <li style="list-style-type: none; margin-left:-2.5em;">- Offered in the Department of Quantitative Applied Economics (QAE) at SKKU</li>
+			</ul>	
+			</ul>
+			</div>
+</div>
+&nbsp;&nbsp;
