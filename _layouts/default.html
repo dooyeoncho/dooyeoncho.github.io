@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 	<html>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+
+<!-- Menu Styles -->
 <style>
+/* --- Footer Menu Styling --- */
 
-/* === Menu Styles (fixed width, horizontal, responsive) === */
-
-/* Base list reset */
 footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;               /* horizontal layout */
-  flex-wrap: wrap;             /* allow wrapping on narrow screens */
-  gap: 10px 15px;              /* spacing between items */
-  justify-content: center;     /* center the menu */
-  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;         /* 💥 force one-line layout */
+  justify-content: center;
+  gap: 15px;
+  overflow-x: auto;          /* 👈 allow scroll if content overflows */
+  white-space: nowrap;
+  background-color: #f5f5f5; /* optional background */
+  padding: 10px 0;
 }
 
-/* Menu link styling */
 footer ul li {
-  margin: 0;                   /* no extra margin */
+  margin: 0;
+  white-space: nowrap;
 }
 
 footer ul li a {
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;             /* base font size */
+  font-size: 15px;
   font-weight: 600;
   color: black;
-  text-decoration: none;       /* remove underline */
-  padding: 4px 6px;            /* space around text */
-  white-space: nowrap;         /* prevent break inside label */
+  text-decoration: none;
+  padding: 4px 6px;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-/* Hover effect (optional) */
 footer ul li a:hover {
   text-decoration: underline;
 }
 
-/* On very small screens, reduce size */
+/* Optional: mobile font adjustment */
 @media (max-width: 480px) {
   footer ul li a {
     font-size: 14px;
     padding: 3px 5px;
   }
 }
-
 </style>
-
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-</head>
 		
 		<footer>
     		<ul>
