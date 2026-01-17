@@ -67,8 +67,24 @@ main,
 			{% seo %}
 		</footer>
 		<body>
-			
-			{{ content }}
-	
-		</body>
+
+  {{ content }}
+
+  <!-- FIX extra gray block below menu -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const footer = document.querySelector("footer");
+      if (!footer) return;
+
+      let next = footer.nextElementSibling;
+
+      // Hide the empty theme-generated block below the menu
+      if (next && next.offsetHeight > 0 && next.innerText.trim() === "") {
+        next.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+
 	</html>
