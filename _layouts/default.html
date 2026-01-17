@@ -4,44 +4,27 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
 
-<!-- Google Font (in HEAD section of each page) -->
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-
 <style>
-/* ======== Footer Menu Styles ======== */
-
-/* Ensure we isolate this footer menu */
-.footer‑nav {
-  background: #f5f5f5;   /* gray bar */
-  width: 100%;
-  padding: 14px 0;       /* controls height of the bar */
-  margin: 0;
-  display: flex;
-  justify‑content: center;
-  align‑items: center;
-  gap: 18px;             /* spacing between links */
-  box‑sizing: border‑box;
-  white‑space: nowrap;   /* no wrapping at all */
+/* === FINAL FOOTER MENU === */
+footer {
+  background-color: #f5f5f5;
+  padding: 10px 0;  /* ✅ controls menu bar height (narrow) */
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.footer‑nav a {
-  font‑family: 'Open Sans', sans‑serif;
-  font‑size: 15px;       /* text size */
-  font‑weight: 600;
+footer .menu-link {
+  display: inline-block;
+  margin: 0 10px;
   color: black;
-  text‑decoration: none;
-  padding: 0 6px;        /* horizontal spacing */
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.footer‑nav a:hover {
-  text‑decoration: underline;
-}
-
-/* Prevent any inherited span rules */
-.footer‑nav span {
-  display: inline;       /* ensure isolation from global span rules */
-  width: auto !important;
-  text‑align: center;
+footer .menu-link:hover {
+  text-decoration: underline;
 }
 </style>
 		
