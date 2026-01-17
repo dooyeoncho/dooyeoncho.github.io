@@ -4,38 +4,44 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
 
+<!-- Google Font (in HEAD section of each page) -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+
 <style>
-/* FULL-WIDTH GRAY MENU BAR — CONSISTENT ON ALL PAGES */
+/* ======== Footer Menu Styles ======== */
 
-footer {
-  background-color: #f5f5f5;
-  padding: 0;
+/* Ensure we isolate this footer menu */
+.footer‑nav {
+  background: #f5f5f5;   /* gray bar */
+  width: 100%;
+  padding: 14px 0;       /* controls height of the bar */
   margin: 0;
-}
-
-footer .footer-menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 20px;
-  padding: 18px 0;           /* ✅ vertical height of the gray bar */
-  max-width: 100%;
-  box-sizing: border-box;
+  justify‑content: center;
+  align‑items: center;
+  gap: 18px;             /* spacing between links */
+  box‑sizing: border‑box;
+  white‑space: nowrap;   /* no wrapping at all */
 }
 
-footer .footer-menu a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+.footer‑nav a {
+  font‑family: 'Open Sans', sans‑serif;
+  font‑size: 15px;       /* text size */
+  font‑weight: 600;
   color: black;
-  text-decoration: none;
-  white-space: nowrap;
-  display: inline-block;
+  text‑decoration: none;
+  padding: 0 6px;        /* horizontal spacing */
 }
 
-footer .footer-menu a:hover {
-  text-decoration: underline;
+.footer‑nav a:hover {
+  text‑decoration: underline;
+}
+
+/* Prevent any inherited span rules */
+.footer‑nav span {
+  display: inline;       /* ensure isolation from global span rules */
+  width: auto !important;
+  text‑align: center;
 }
 </style>
 		
