@@ -1,63 +1,47 @@
 <!DOCTYPE html>
 	<html>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
 
 <style>
-/* ===== FOOTER BAR (controls gray area + lines) ===== */
+/* MENU BAR */
 footer {
-  background-color: #f5f5f5;          /* gray bar */
-  padding: 18px 0;                    /* ✅ THIS controls bar height */
-  border-top: 1px solid #d0d0d0;      /* top horizontal line */
-  border-bottom: 1px solid #d0d0d0;   /* bottom horizontal line */
+  background-color: #f5f5f5;
+  padding: 18px 0;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
   margin: 0;
 }
 
-/* ===== MENU LAYOUT ===== */
+/* MENU CONTENT */
 footer ul {
   list-style: none;
   margin: 0 auto;
-  padding: 0;                         /* IMPORTANT: no padding here */
+  padding: 0;
   display: flex;
-  flex-wrap: nowrap;                 /* one line only */
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 20px;                         /* space between menu items */
-  max-width: 100%;
-  box-sizing: border-box;
+  gap: 20px;
 }
 
-/* ===== MENU ITEMS ===== */
-footer ul li {
-  margin: 0;
-}
-
-/* ===== MENU LINKS ===== */
+/* LINKS */
 footer ul li a {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: black;
   text-decoration: none;
-  white-space: nowrap;               /* prevent wrapping */
-  display: inline-block;
+  white-space: nowrap;
 }
 
-footer ul li a:hover {
-  text-decoration: underline;
-	
+/* REMOVE EMPTY THEME BLOCK BELOW MENU */
+footer + section,
+footer + div,
+footer + main {
+  background: transparent !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
-
-footer {
-  margin-bottom: 0 !important;
-}
-
-footer::after {
-  content: none !important;
-}
-
-footer { outline: 2px solid red; }
-	
 </style>
 		
 		<footer>
