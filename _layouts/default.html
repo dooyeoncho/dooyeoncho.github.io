@@ -48,14 +48,16 @@
       text-decoration: underline;
     }
 
-/* ===== MOBILE ONLY: FORCE EXACTLY TWO LINES ===== */
+/* ===== MOBILE ONLY: remove the word "INDEX" ===== */
 @media (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+
+  /* ensure exactly two lines */
   .topmenu ul {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto); /* EXACTLY TWO ROWS */
+    flex-wrap: wrap;
     justify-content: center;
-    column-gap: 14px;
     row-gap: 6px;
   }
 }
@@ -73,8 +75,8 @@
       <li><a href="/pages/education.html">EDUCATION</a></li>
       <li><a href="/pages/research.html">RESEARCH</a></li>
       <li><a href="/pages/teaching.html">TEACHING</a></li>
-      <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU INDEX</a></li>
-      <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR INDEX</a></li>
+      <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU <span class="mobile-hide">INDEX</span></a></li>
+      <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR <span class="mobile-hide">INDEX</span></a></li>
       <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
     </ul>
   </nav>
