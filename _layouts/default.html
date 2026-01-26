@@ -48,22 +48,27 @@
       text-decoration: underline;
     }
 
-/* ===== MOBILE ONLY: TIGHTEN MENU SPACING ===== */
+/* ===== MOBILE ONLY: TWO LINES, NO OVERLAP ===== */
 @media (max-width: 768px) {
 
-  /* Reduce space BETWEEN items */
   .topmenu ul {
-    gap: 6px 10px;        /* row-gap | column-gap */
-    padding: 0 6px;       /* reduce side padding */
+    flex-wrap: wrap;          /* allow wrapping */
+    justify-content: center;
+    row-gap: 8px;             /* vertical spacing */
+    column-gap: 14px;         /* horizontal spacing */
   }
 
-  /* Reduce space AROUND text */
+  .topmenu li {
+    flex: 0 0 auto;           /* prevent shrinking */
+  }
+
   .topmenu a {
-    padding: 0 2px;       /* default is often larger */
-    font-size: 12px;      /* small but still readable */
-    letter-spacing: -0.02em; /* subtle tightening */
+    font-size: 13px;          /* readable, safe */
+    padding: 2px 4px;         /* minimal but non-zero */
+    white-space: nowrap;      /* no word breaking */
   }
 }
+
 
     
   </style>
