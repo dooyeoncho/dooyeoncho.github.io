@@ -41,24 +41,26 @@ main,
   background: transparent !important;
 }
 
-/* --- MOBILE: make menu wrap instead of clipping --- */
+/* ===== MOBILE: ONE-LINE SCROLLING MENU ===== */
 @media screen and (max-width: 768px) {
   footer ul {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 8px 14px !important;
+    flex-wrap: nowrap !important;     /* FORCE one line */
+    overflow-x: auto;                 /* allow horizontal scroll */
+    justify-content: flex-start;      /* align left for scrolling */
+    padding: 0 12px;
   }
 
   footer ul li a {
-    white-space: normal !important;   /* allow wrapping */
-    font-size: 12px !important;       /* optional: helps fit */
+    white-space: nowrap !important;   /* prevent text wrapping */
+    font-size: 13px;                  /* slightly smaller */
   }
 
-  footer {
-    padding: 12px 0 !important;       /* optional */
+  /* Hide scrollbar (clean look) */
+  footer ul::-webkit-scrollbar {
+    display: none;
   }
+}
 
-  footer { background: yellow !important; }
 
 }
 
