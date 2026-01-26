@@ -40,6 +40,41 @@ footer ul li a {
 footer ul li a:hover {
   text-decoration: underline;
 }
+
+/* ===== MOBILE ONLY: improve menu layout ===== */
+@media (max-width: 768px) {
+
+  footer:first-of-type ul {
+    flex-wrap: wrap;          /* allow wrapping */
+    row-gap: 6px;             /* vertical spacing between lines */
+    column-gap: 14px;         /* horizontal spacing */
+    justify-content: center;  /* keep centered */
+  }
+
+}
+
+/* ===== MOBILE ONLY: widen content area ===== */
+@media (max-width: 768px) {
+
+  body {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* common Jekyll wrappers — harmless if they don’t exist */
+  .wrapper,
+  .container,
+  .page-content,
+  main {
+    max-width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+}
+
+  
+  
 </style>
 
 <!-- ===== MENU FOOTER (TOP) ===== -->
