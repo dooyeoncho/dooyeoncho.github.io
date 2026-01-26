@@ -48,14 +48,17 @@
       text-decoration: underline;
     }
 
-    /* ===== MOBILE ONLY: allow menu to wrap into two lines ===== */
+/* ===== MOBILE: FORCE EXACTLY TWO LINES ===== */
 @media (max-width: 768px) {
   .topmenu ul {
-    flex-wrap: wrap;          /* allow 2 lines */
-    row-gap: 6px;             /* vertical spacing between lines */
-    justify-content: center;  /* keep centered */
+    flex-wrap: wrap;
+    max-width: 92vw;        /* key: limits width so only 2 rows form */
+    margin: 0 auto;
+    row-gap: 6px;
+    justify-content: center;
   }
 }
+
 
     
   </style>
