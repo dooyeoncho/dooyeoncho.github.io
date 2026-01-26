@@ -47,6 +47,17 @@
     .topmenu a:hover {
       text-decoration: underline;
     }
+
+    /* ===== MOBILE ONLY: allow menu to wrap into two lines ===== */
+@media (max-width: 768px) {
+  .topmenu ul {
+    flex-wrap: wrap;          /* allow 2 lines */
+    row-gap: 6px;             /* vertical spacing between lines */
+    justify-content: center;  /* keep centered */
+  }
+}
+
+    
   </style>
 </head>
 
