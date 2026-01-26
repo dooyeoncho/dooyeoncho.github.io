@@ -40,11 +40,23 @@ main,
   background: transparent !important;
 }
 
-@media (max-width: 600px) {
+/* ===== MOBILE MENU FIX ===== */
+@media (max-width: 700px) {
   footer ul {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;      /* allow second line */
+    justify-content: center;
+  }
+
+  footer ul li a {
+    white-space: normal !important;  /* allow text wrapping */
+    font-size: 13px;                 /* optional: slightly smaller */
+  }
+
+  footer {
+    padding: 12px 0;                 /* slightly slimmer bar */
   }
 }
+
 }
 </style>
 		
