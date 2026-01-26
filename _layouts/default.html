@@ -48,17 +48,17 @@
       text-decoration: underline;
     }
 
-/* ===== MOBILE: FORCE EXACTLY TWO LINES ===== */
+/* ===== MOBILE ONLY: FORCE EXACTLY TWO LINES ===== */
 @media (max-width: 768px) {
   .topmenu ul {
-    flex-wrap: wrap;
-    max-width: 92vw;        /* key: limits width so only 2 rows form */
-    margin: 0 auto;
-    row-gap: 6px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto); /* EXACTLY TWO ROWS */
     justify-content: center;
+    column-gap: 14px;
+    row-gap: 6px;
   }
 }
-
 
     
   </style>
