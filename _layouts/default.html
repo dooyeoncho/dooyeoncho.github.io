@@ -1,113 +1,67 @@
 <!DOCTYPE html>
-	<html>
+<html lang="en">
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-footer {
-  background-color: #f5f5f5;
-  padding: 10px 0;
-  border-top: 1px solid #d0d0d0;
-  border-bottom: 1px solid #d0d0d0;
-  margin: 0;
-}
+  <title>{{ page.title }}</title>
 
-footer ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 20px;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  {% seo %}
 
-footer ul li a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-  white-space: nowrap;
-}
+  <style>
+    footer {
+      background-color: #f5f5f5;
+      padding: 10px 0;
+      border-top: 1px solid #d0d0d0;
+      border-bottom: 1px solid #d0d0d0;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
 
-main,
-.page-content,
-.wrapper,
-.container {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  background: transparent !important;
-}
+    footer ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-/* ===== FORCE MENU BAR TO FULL WIDTH (THE REAL FIX) ===== */
+    footer ul li a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
 
-/* Remove width constraint from ANY wrapper containing header/nav */
-header,
-header * {
-  max-width: none !important;
-}
+<body>
 
-/* Make the gray bar span the full viewport */
-header {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background-color: #f5f5f5;
-}
-
-/* Keep menu items centered (desktop look unchanged) */
-header nav ul {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-
-
-	
-}
-</style>
-		
-		<footer>
-    		<ul>
-			<li><span class="highlight-title"><a href="https://dooyeoncho.github.io/"> HOME</a></span></li>
-			<li><span class="highlight-title"><a href="/pages/education.html"> EDUCATION</a></span></li>
-			<li><span class="highlight-title"><a href="/pages/research.html"> RESEARCH</a></span></li>
-			<li><span class="highlight-title"><a href="/pages/teaching.html"> TEACHING</a></span></li>
-			<li><span class="highlight-title"><a href="/pages/new_korean_epu_index.html"> NEW KOREA EPU INDEX</a></span></li>
-			<li><span class="highlight-title"><a href="/pages/new_korean_gpr_index.html"> NEW KOREA GPR INDEX</a></span></li>
-        	<li><span class="highlight-title"><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></span></li>
-		</ul>
-		</footer>
-		
-		<footer>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			{% if site.google_analytics and jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
-			{% seo %}
-		</footer>
-		<body>
+  <footer>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/pages/education.html">EDUCATION</a></li>
+      <li><a href="/pages/research.html">RESEARCH</a></li>
+      <li><a href="/pages/teaching.html">TEACHING</a></li>
+      <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU INDEX</a></li>
+      <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR INDEX</a></li>
+      <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
+    </ul>
+  </footer>
 
   {{ content }}
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const footer = document.querySelector("footer");
-      if (!footer) return;
-
-      let next = footer.nextElementSibling;
-
-      if (next && next.offsetHeight > 0 && next.innerText.trim() === "") {
-        next.style.display = "none";
-      }
-    });
-  </script>
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
 
 </body>
-
-	</html>
+</html>
