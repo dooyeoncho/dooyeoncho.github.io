@@ -48,13 +48,27 @@
       text-decoration: underline;
     }
 
-/* ===== MOBILE ONLY: remove the word "INDEX" ===== */
+/* ===== MOBILE / DESKTOP LABEL SWITCH ===== */
+.desktop-only {
+  display: inline;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ===== MOBILE ONLY ===== */
 @media (max-width: 768px) {
-  .mobile-hide {
+
+  .desktop-only {
     display: none;
   }
 
-  /* ensure exactly two lines */
+  .mobile-only {
+    display: inline;
+  }
+
+  /* force exactly two lines */
   .topmenu ul {
     flex-wrap: wrap;
     justify-content: center;
@@ -75,8 +89,8 @@
       <li><a href="/pages/education.html">EDUCATION</a></li>
       <li><a href="/pages/research.html">RESEARCH</a></li>
       <li><a href="/pages/teaching.html">TEACHING</a></li>
-      <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU <span class="mobile-hide">INDEX</span></a></li>
-      <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR <span class="mobile-hide">INDEX</span></a></li>
+      <li><a href="/pages/new_korean_epu_index.html"><span class="desktop-only">NEW KOREA EPU INDEX</span><span class="mobile-only">KOREA EPU INDEX</span></a></li>
+      <li><a href="/pages/new_korean_gpr_index.html"><span class="desktop-only">NEW KOREA GPR INDEX</span><span class="mobile-only">KOREA GPR INDEX</span></a></li>
       <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
     </ul>
   </nav>
