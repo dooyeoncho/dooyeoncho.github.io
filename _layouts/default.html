@@ -69,6 +69,25 @@
   }
 }
 
+/* ===== DEFAULT (DESKTOP) ===== */
+.desktop-only {
+  display: inline;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline;
+  }
+}
 
     
   </style>
