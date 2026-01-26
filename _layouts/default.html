@@ -41,28 +41,34 @@ main,
   background: transparent !important;
 }
 
-/* ===== MOBILE: ONE-LINE SCROLLING MENU ===== */
+/* ===== MOBILE: FULL-WIDTH SCROLLABLE MENU ===== */
 @media screen and (max-width: 768px) {
+
+  footer {
+    overflow-x: visible;        /* allow child scrolling */
+  }
+
   footer ul {
-    flex-wrap: nowrap !important;     /* FORCE one line */
-    overflow-x: auto;                 /* allow horizontal scroll */
-    justify-content: flex-start;      /* align left for scrolling */
+    display: flex;
+    flex-wrap: nowrap !important;
+    width: max-content;         /* allow full menu width */
+    min-width: 100vw;           /* ensure viewport coverage */
+    overflow-x: auto;
+    justify-content: flex-start;
     padding: 0 12px;
   }
 
   footer ul li a {
-    white-space: nowrap !important;   /* prevent text wrapping */
-    font-size: 13px;                  /* slightly smaller */
+    white-space: nowrap !important;
+    font-size: 13px;
   }
 
-  /* Hide scrollbar (clean look) */
+  /* Hide scrollbar but keep scrolling */
   footer ul::-webkit-scrollbar {
     display: none;
   }
 }
 
-
-}
 
 
 }
