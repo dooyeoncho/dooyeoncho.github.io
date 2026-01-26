@@ -41,43 +41,13 @@ main,
   background: transparent !important;
 }
 
-/* ===== FORCE FULL-WIDTH MENU (BREAK OUT OF WRAPPER) ===== */
-@media screen and (max-width: 1024px) {
-
-  footer {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    width: 100vw;
-
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  footer ul {
-    display: inline-flex !important;
-    flex-wrap: nowrap !important;
-    width: max-content !important;
-    margin: 0 auto !important;
-    padding: 0 16px !important;
-    gap: 14px !important;
-  }
-
-  footer ul li a {
-    white-space: nowrap !important;
-    font-size: 13px !important;
-  }
-
-  footer::-webkit-scrollbar {
-    display: none;
-  }
+footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
-
-
+	
 }
 </style>
 		
