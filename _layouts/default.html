@@ -48,31 +48,20 @@
       text-decoration: underline;
     }
 
-/* ===== MOBILE / DESKTOP LABEL SWITCH ===== */
-.desktop-only {
-  display: inline;
-}
-
-.mobile-only {
-  display: none;
-}
-
-/* ===== MOBILE ONLY ===== */
+/* ===== MOBILE ONLY: TIGHTEN MENU SPACING ===== */
 @media (max-width: 768px) {
 
-  .desktop-only {
-    display: none;
-  }
-
-  .mobile-only {
-    display: inline;
-  }
-
-  /* force exactly two lines */
+  /* Reduce space BETWEEN items */
   .topmenu ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 6px;
+    gap: 6px 10px;        /* row-gap | column-gap */
+    padding: 0 6px;       /* reduce side padding */
+  }
+
+  /* Reduce space AROUND text */
+  .topmenu a {
+    padding: 0 2px;       /* default is often larger */
+    font-size: 12px;      /* small but still readable */
+    letter-spacing: -0.02em; /* subtle tightening */
   }
 }
 
