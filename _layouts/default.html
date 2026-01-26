@@ -2,6 +2,7 @@
 	<html>
 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 footer {
@@ -40,22 +41,27 @@ main,
   background: transparent !important;
 }
 
-/* ===== MOBILE MENU FIX ===== */
-@media (max-width: 700px) {
+/* --- MOBILE: make menu wrap instead of clipping --- */
+@media screen and (max-width: 768px) {
   footer ul {
-    flex-wrap: wrap !important;      /* allow second line */
-    justify-content: center;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px 14px !important;
   }
 
   footer ul li a {
-    white-space: normal !important;  /* allow text wrapping */
-    font-size: 13px;                 /* optional: slightly smaller */
+    white-space: normal !important;   /* allow wrapping */
+    font-size: 12px !important;       /* optional: helps fit */
   }
 
   footer {
-    padding: 12px 0;                 /* slightly slimmer bar */
+    padding: 12px 0 !important;       /* optional */
   }
+
+  footer { background: yellow !important; }
+
 }
+
 
 }
 </style>
