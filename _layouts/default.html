@@ -69,33 +69,19 @@ footer ul li a:hover {
     padding-right: 0px !important;
   }
 
-  footer:first-of-type ul {
+  /* ===== FINAL DESKTOP MENU FIX ===== */
+footer:first-of-type ul {
   list-style: none;
-  margin: 0;
-  padding: 0 24px;              /* inner padding of bar */
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 100%;                  /* 🔑 fill the bar */
-  box-sizing: border-box;
+  justify-content: center;     /* 🔑 correct behavior */
+  gap: 28px;                   /* 🔑 controls spacing */
 }
 
-/* ===== DESKTOP: spread menu items across the full bar ===== */
 footer:first-of-type {
-  display: block !important;
-}
-
-footer:first-of-type > ul {
-  width: 100% !important;
-  max-width: none !important;          /* IMPORTANT: remove theme constraint */
-  margin: 0 !important;                /* IMPORTANT: kill centering */
-  padding: 0 24px !important;          /* inner padding of the bar */
-  box-sizing: border-box !important;
-
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  justify-content: space-between !important;  /* KEY */
-  gap: 0 !important;                    /* IMPORTANT: remove gap that fights spacing */
+  padding: 8px 0;
 }
 
 
