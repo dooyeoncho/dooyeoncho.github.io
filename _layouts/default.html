@@ -21,16 +21,6 @@ footer {
   margin: 0;
 }
 
-footer ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 20px;
-}
-
 footer ul li {
   margin: 0;
   padding: 0;
@@ -90,8 +80,24 @@ footer ul li a:hover {
   box-sizing: border-box;
 }
 
-
+/* ===== DESKTOP: spread menu items across the full bar ===== */
+footer:first-of-type {
+  display: block !important;
 }
+
+footer:first-of-type > ul {
+  width: 100% !important;
+  max-width: none !important;          /* IMPORTANT: remove theme constraint */
+  margin: 0 !important;                /* IMPORTANT: kill centering */
+  padding: 0 24px !important;          /* inner padding of the bar */
+  box-sizing: border-box !important;
+
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;  /* KEY */
+  gap: 0 !important;                    /* IMPORTANT: remove gap that fights spacing */
+}
+
 
   
   
