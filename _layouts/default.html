@@ -1,111 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
 
+  <!-- Main stylesheet -->
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- SEO + Google Analytics -->
   {% seo %}
+
+  <style>
+    /* ===== TOP MENU BAR ===== */
+    footer {
+      background-color: #f5f5f5;
+      border-top: 1px solid #d0d0d0;
+      border-bottom: 1px solid #d0d0d0;
+      padding: 8px 0;              /* correct bar height */
+      margin: 0;
+    }
+
+    /* ===== MENU LIST (DESKTOP) ===== */
+    footer ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;     /* matches your 2nd screenshot */
+      gap: 28px;                   /* even spacing */
+    }
+
+    footer ul li {
+      margin: 0;
+      padding: 0;
+    }
+
+    footer ul li a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== MOBILE ONLY ===== */
+    @media (max-width: 768px) {
+
+      footer ul {
+        flex-wrap: wrap;           /* allow wrapping */
+        justify-content: center;
+        row-gap: 6px;
+        column-gap: 14px;
+      }
+
+      body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .wrapper,
+      .container,
+      .page-content,
+      main {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  </style>
 </head>
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-footer {
-  background-color: #f5f5f5;
-  padding: 10px 0;
-  border-top: 1px solid #d0d0d0;
-  border-bottom: 1px solid #d0d0d0;
-  margin: 0;
-}
-
-footer ul li {
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-footer ul li a:hover {
-  text-decoration: underline;
-}
-
-/* ===== MOBILE ONLY: improve menu layout ===== */
-@media (max-width: 768px) {
-
-  footer:first-of-type ul {
-    flex-wrap: wrap;          /* allow wrapping */
-    row-gap: 6px;             /* vertical spacing between lines */
-    column-gap: 14px;         /* horizontal spacing */
-    justify-content: center;  /* keep centered */
-  }
-
-}
-
-/* ===== MOBILE ONLY: widen content area ===== */
-@media (max-width: 768px) {
-
-  body {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  /* common Jekyll wrappers — harmless if they don’t exist */
-  .wrapper,
-  .container,
-  .page-content,
-  main {
-    max-width: 100% !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-
-  /* ===== FINAL DESKTOP MENU FIX ===== */
-footer:first-of-type ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;     /* 🔑 correct behavior */
-  gap: 28px;                   /* 🔑 controls spacing */
-}
-
-footer:first-of-type {
-  padding: 8px 0;
-}
-
-
-  
-  
-</style>
-
-<!-- ===== MENU FOOTER (TOP) ===== -->
-<footer>
-  <ul>
-    <li><a href="https://dooyeoncho.github.io/">HOME</a></li>
-    <li><a href="/pages/education.html">EDUCATION</a></li>
-    <li><a href="/pages/research.html">RESEARCH</a></li>
-    <li><a href="/pages/teaching.html">TEACHING</a></li>
-    <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU INDEX</a></li>
-    <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR INDEX</a></li>
-    <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
-  </ul>
-</footer>
-
 <body>
+
+  <!-- ===== TOP MENU ===== -->
+  <footer>
+    <ul>
+      <li><a href="https://dooyeoncho.github.io/">HOME</a></li>
+      <li><a href="/pages/education.html">EDUCATION</a></li>
+      <li><a href="/pages/research.html">RESEARCH</a></li>
+      <li><a href="/pages/teaching.html">TEACHING</a></li>
+      <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU INDEX</a></li>
+      <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR INDEX</a></li>
+      <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
+    </ul>
+  </footer>
 
   {{ content }}
 
 </body>
-
 </html>
