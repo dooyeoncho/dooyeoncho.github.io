@@ -78,6 +78,26 @@
         padding-right: 0;
       }
     }
+
+    /* ===== FIX: align menu correctly on ALL pages ===== */
+
+    /* Neutralize theme wrapper padding for menu only */
+    .wrapper footer,
+    .page-content footer,
+    main footer {
+     margin-left: calc(50% - 50vw);
+     margin-right: calc(50% - 50vw);
+     padding-left: 0;
+     padding-right: 0;
+    }
+
+    /* Ensure menu items stay inside bar */
+    footer ul {
+      padding-left: 24px;
+      padding-right: 24px;
+      box-sizing: border-box;
+    }
+
   </style>
 </head>
 
