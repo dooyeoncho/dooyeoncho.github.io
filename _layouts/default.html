@@ -78,16 +78,16 @@ footer ul li a:hover {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  
 
   footer:first-of-type ul {
   list-style: none;
-  margin: 0 auto;
-  padding: 0 20px;        /* space from bar edges */
+  margin: 0;
+  padding: 0 24px;              /* inner padding of bar */
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;  /* 🔑 THIS */
-  max-width: 1200px;     /* align with content width */
+  justify-content: space-between;
+  width: 100%;                  /* 🔑 fill the bar */
+  box-sizing: border-box;
 }
 
 
