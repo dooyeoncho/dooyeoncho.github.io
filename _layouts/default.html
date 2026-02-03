@@ -52,36 +52,45 @@
     .top-menu-inner a:hover {
       text-decoration: underline;
     }
-
+	  
     /* ===== MOBILE ONLY ===== */
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-      .top-menu-inner {
-        max-width: 100%;
-        padding: 0 12px;
-      }
+  /* Make the bar expand with wrapped menu */
+  .top-menu {
+    padding: 10px 0;          /* slightly taller on mobile */
+  }
 
-      .top-menu-inner ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 6px;
-        column-gap: 10px;
-      }
+  .top-menu-inner {
+    max-width: 100%;
+    padding: 0 12px;
+  }
 
-      body {
-        padding-left: 0;
-        padding-right: 0;
-      }
+  /* IMPORTANT: let ul define its own height */
+  .top-menu-inner ul {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 10px;
+    box-sizing: border-box;
+  }
 
-      .wrapper,
-      .container,
-      .page-content,
-      main {
-        max-width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wrapper,
+  .container,
+  .page-content,
+  main {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
   </style>
 </head>
 
