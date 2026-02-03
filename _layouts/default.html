@@ -43,11 +43,19 @@
     .top-menu-inner a:hover {
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
-      font-weight: 700;
-      color: #000000; !important;
       white-space: nowrap;
 	  text-decoration: underline;
     }
+
+	/* ===== FORCE DARK MENU LINKS ===== */
+   .top-menu-inner a,
+   .top-menu-inner a:link,
+   .top-menu-inner a:visited {
+     color: #000000 !important;   /* pure black */
+     font-weight: 800 !important; /* very bold */
+     opacity: 1 !important;       /* kill any fading */
+   }
+
 	  
 /* ===== DEFAULT (DESKTOP) ===== */
 .menu-desktop {
