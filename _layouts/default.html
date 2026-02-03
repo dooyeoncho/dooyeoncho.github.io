@@ -115,20 +115,10 @@
   }
 }
 
-
-
   </style>
 </head>
 
-<footer>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			{% if site.google_analytics and jekyll.environment == 'production' %}
-{% include analytics.html %}
-{% endif %}
-			{% seo %}
-		</footer>
+		
 
       <footer>
       <ul>
@@ -141,9 +131,20 @@
         <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
       </ul>
 	  </footer>
-<body>
 	
-  {{ content }}
+	<footer>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			{% if site.google_analytics and jekyll.environment == 'production' %}
+{% include analytics.html %}
+{% endif %}
+			{% seo %}
+	</footer>
+     
+	  <body>
+	
+       {{ content }}
 
-</body>
-</html>
+     </body>
+   </html>
