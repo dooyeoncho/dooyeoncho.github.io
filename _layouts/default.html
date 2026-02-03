@@ -54,11 +54,12 @@
     }
 	  
     /* ===== MOBILE ONLY ===== */
+/* ===== MOBILE ONLY ===== */
 @media (max-width: 768px) {
 
-  /* Make the bar expand with wrapped menu */
+  /* Make bar grow with wrapped menu */
   .top-menu {
-    padding: 10px 0;          /* slightly taller on mobile */
+    padding: 10px 0;
   }
 
   .top-menu-inner {
@@ -66,8 +67,10 @@
     padding: 0 12px;
   }
 
-  /* IMPORTANT: let ul define its own height */
+  /* 🔑 THIS IS THE REAL FIX */
   .top-menu-inner ul {
+    margin: 0;                 /* REMOVE default UL margins */
+    padding: 0;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -90,6 +93,7 @@
     padding-right: 0;
   }
 }
+
 
   </style>
 </head>
