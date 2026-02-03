@@ -53,7 +53,15 @@
       text-decoration: underline;
     }
 	  
-    /* ===== MOBILE ONLY ===== */
+/* ===== DEFAULT (DESKTOP) ===== */
+.menu-desktop {
+  display: inline;
+}
+
+.menu-mobile {
+  display: none;
+}
+
 /* ===== MOBILE ONLY ===== */
 @media (max-width: 768px) {
 
@@ -67,9 +75,9 @@
     padding: 0 12px;
   }
 
-  /* 🔑 THIS IS THE REAL FIX */
+  /* Menu wrapping + containment */
   .top-menu-inner ul {
-    margin: 0;                 /* REMOVE default UL margins */
+    margin: 0;          /* remove default UL margins */
     padding: 0;
     width: 100%;
     flex-wrap: wrap;
@@ -77,6 +85,15 @@
     row-gap: 8px;
     column-gap: 10px;
     box-sizing: border-box;
+  }
+
+  /* Switch menu labels */
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: inline;
   }
 
   body {
@@ -93,6 +110,7 @@
     padding-right: 0;
   }
 }
+
 
 
   </style>
@@ -118,8 +136,8 @@
         <li><a href="/pages/education.html">EDUCATION</a></li>
         <li><a href="/pages/research.html">RESEARCH</a></li>
         <li><a href="/pages/teaching.html">TEACHING</a></li>
-        <li><a href="/pages/new_korean_epu_index.html">NEW KOREA EPU INDEX</a></li>
-        <li><a href="/pages/new_korean_gpr_index.html">NEW KOREA GPR INDEX</a></li>
+        <li><a href="/pages/new_korean_epu_index.html"><span class="menu-desktop">NEW KOREA EPU INDEX</span><span class="menu-mobile">NEW KOREA EPU</span></a></li>
+        <li><a href="/pages/new_korean_gpr_index.html"><span class="menu-desktop">NEW KOREA GPR INDEX</span><span class="menu-mobile">NEW KOREA GPR</span></a></li>
         <li><a href="mailto:dooyeoncho@g.skku.edu">EMAIL</a></li>
       </ul>
     </div>
